@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    font-size: 21px;
+ }
+
+ body{
+    display: flex;
+    height: 130vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background:linear-gradient(135deg,#71b7e6,#9b59b6) ;
+ }
+.Container{
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius:5px;
+  height: 120vh;
+}
+.Container .Action{
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+}
+.Container .Action::before{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width:30px;
+    left: 0;
+    bottom:0;
+    background:linear-gradient(135deg,#71b7e6,#9b59b6) ;
+   }
+.Container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+    width: calc(100%/ 2 - 20px);
+    margin-bottom: 15px;
+}
+.user-details .input-box .deatails{
+    font-weight: 500px;
+    margin-bottom: 5px;
+    display: block;
+}
+.user-details .input-box input{
+   height: 45px;
+   width: 100%;
+   outline: none;
+   border-radius: 5px;
+   border: 1px solid rgb(243, 241, 241);
+   padding-left: 15px;
+   font-size: 16px;
+   border-bottom-width: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+   border-color: #9b59b6;
+}
+form .Gender-etails .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+form .Gender-etails .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+.Gender-etails .category label{
+    display: flex;
+    align-items: center;
+}
+.Gender-etails .category .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category .one,
+#dot-2:checked ~ .category .two,
+#dot-3:checked ~ .category .three{
+  border-color: #d9d9d9;
+  background: #9b59b6;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .Button{
+    height: 45px;
+    margin: 45px 0;
+}
+form .Button input{
+    height:100%;
+    width:100%;
+    outline:none;
+    color:#fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing:1px;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6) ;
+
+}
+form .Button input:hover{
+    background: linear-gradient(135deg,#17496b,#550a73) ;
+}
+/* @media (max-width:584px){
+    .Container{
+        max-width: 100%;
+    }
+    form .user-details .input-box{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    form .Gender-etails .category{
+        width: 100%;
+    }
+    .Container form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+} */
